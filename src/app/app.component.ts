@@ -8,7 +8,7 @@ import { User } from './user';
 })
 export class AppComponent {
   title = 'app';              // 아무것도 안주면  데이터 타입이 any 다
-  userList : Array<User> = [];  // 제너릭
+  userList : Array<User> = [];  // 데이터타입을 User로 강제한 배열을 만듬 (제너릭)
   userName:string = '';
   userAge:number = 0;
 
