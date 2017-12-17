@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+import { enableProdMode } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 
@@ -13,7 +15,15 @@ import { UserComponent } from './user/user.component';
   ],
   imports: [ // 등록해두면 다시 선언할 필요없다
     BrowserModule,
-     FormsModule
+     FormsModule,
+     HttpModule,
+     ReactiveFormsModule,
+     RouterModule.forRoot([
+       {
+         path: 'user',
+         component: UserComponent
+       }
+     ])
   ],
   providers: [],
   bootstrap: [AppComponent]

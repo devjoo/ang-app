@@ -2,6 +2,13 @@
 <div class="container">
   <h2>{{title}}</h2>
   <button (click)="getUsers()">유저리스트불러오기</button>
+  <div>
+    이름 : <input type="text" [(ngModel)]="addUserObj.userName">     
+    아이디 : <input type="text" [(ngModel)]="addUserObj.userId">
+    비밀번호 : <input type="text" [(ngModel)]="addUserObj.userPwd">
+    나이 : <input type="text" [(ngModel)]="addUserObj.userAge">
+  </div>
+  <button (click)="addUser()">가상유저추가</button>
   <table class="table table-hover">
     <thead>
       <tr>
