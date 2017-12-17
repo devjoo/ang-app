@@ -64,3 +64,13 @@ ng test
 ```
 ng serve -p 80
 ```
+
+## ng generate component User 하면 파일 4개가 생성되고 하나 업데이트
+```
+D:\ts2\works\ang>ng generate component User
+  create src/app/user/user.component.html (23 bytes)
+  create src/app/user/user.component.spec.ts (614 bytes)
+  create src/app/user/user.component.ts (261 bytes)
+  create src/app/user/user.component.css (0 bytes)
+  update src/app/app.module.ts (448 bytes)
+  ```
