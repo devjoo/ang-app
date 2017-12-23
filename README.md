@@ -74,3 +74,39 @@ D:\ts2\works\ang>ng generate component User
   create src/app/user/user.component.css (0 bytes)
   update src/app/app.module.ts (448 bytes)
   ```
+
+  ## test 컴포넌트 생성
+  D:\ts2\works\ang>ng generate component test
+  create src/app/test/test.component.html (23 bytes)
+  create src/app/test/test.component.spec.ts (614 bytes)
+  create src/app/test/test.component.ts (261 bytes)
+  create src/app/test/test.component.css (0 bytes)
+  update src/app/app.module.ts (939 bytes)
+
+### app/app.module.ts 에서 
+패스 추가
+```
+ RouterModule.forRoot([
+       {
+         path: 'user',
+         component: UserComponent
+       },
+       {
+        path: 'test',
+        component: TestComponent
+      }
+```
+### app/app.component.html
+에 링크 test로 해서 앵커 추가
+
+### 서버 실행 (80포트)
+  ng serve -p 80 
+
+### test.ts 파일 생성
+  ng generate class Test
+
+  ### Depart 컴포넌트 생성
+  ng generate c Depart
+
+  ### Depart 서비스 클래스 생성
+  ng g service Depart

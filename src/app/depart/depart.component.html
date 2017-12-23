@@ -1,0 +1,43 @@
+<div>
+  {{title}}
+  <div>
+    dino : <input type="text" [(ngModel)]="di.dino"><br>
+    diname : <input type="text" [(ngModel)]="di.diname"><br>
+    didesc : <input type="text" [(ngModel)]="di.didesc"><br>
+    dicnt : <input type="text" [(ngModel)]="di.dicnt">
+  </div>
+  <div>
+    결과 : 
+    부서번호 :{{di.dino}}<br>
+    부서이름 :{{di.diname}}<br>
+    부서설명 :{{di.didesc}}<br>
+    부서인원 :{{di.dicnt}}<br>
+  </div>
+  <div>
+    <button (click)="printDepartInfo()">변경</button>
+    <button (click)="addDepart()">부서추가</button>
+    <button (click)="showDepartList()">부서리스트보기</button>
+    <button (click)="changeShow()">테스트 {{button}}</button>
+  </div>
+  <table width="100%" *ngIf="diList.length != 0">
+      <tr>
+      <th>부서번호</th>
+      <th>부서이름</th>
+      <th>부서설명</th>
+      <th>부서인원</th>
+      <th>삭제</th>
+      </tr>
+      <tr *ngFor="let di of diList; let idx = index" height="20">
+          <td>{{idx}}</td>
+          <td>{{di.dino}}</td>
+          <td>{{di.diname}}</td>
+          <td>{{di.didesc}}</td>
+          <td>{{di.dicnt}}</td>
+          <td><button (click)="deleteDepart(di)">삭제</button></td>
+          <td><button (click)="deleteDepart2(di.dino)">삭제2</button></td>
+          
+      </tr>
+</table>
+</div>
+
+<app-test *ngIf="isShow"></app-test>

@@ -1,0 +1,8 @@
+<div>
+  <h2>{{title}}</h2>
+  <button (click)="changeTitle()">타이틀 변경</button><br>
+  {{tt.name}}<br>
+  {{tt.title}}<br>
+  이름 : <input type="text" [(ngModel)]="tt.name"><br>
+  타이틀 : <input type="text" [(ngModel)]="tt.title">
+</div>
