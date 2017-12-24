@@ -44,7 +44,7 @@ export class DepartComponent implements OnInit {
         let result = datas.json();
         this.di = result.di;
         //console.log(result.di);
-        console.log(result);
+        //console.log(result);
       }
     );
   }
