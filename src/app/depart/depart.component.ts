@@ -9,7 +9,7 @@ import { DepartService } from './depart.service';
   providers:[DepartService] //얘를 사용하겠다고 providers로 지정해줘야한다 
 })
 export class DepartComponent implements OnInit {
-  //di : Depart;
+  di : Depart;
   title : string = "부서정보";
   button : string = "보기";
   btnStr : string = "보기"; // 쌤이 한거
@@ -22,7 +22,7 @@ export class DepartComponent implements OnInit {
   subTitle :string = this.title + "입력";
   
   constructor(private dis:DepartService) {
-    //this.di = new Depart();  // 메모리에 생성해야 사용할수있다
+    this.di = new Depart();  // 메모리에 생성해야 사용할수있다
     //dis.getDepartList();
     console.log("나도 누군가를 호출하겠지!!");
 
@@ -42,6 +42,7 @@ export class DepartComponent implements OnInit {
     this.dis.addDepart(di).subscribe( //subscribe 요청하고 나서 풀어주는것
       datas => {
         let result = datas.json();
+        this.di = result.di;
         //console.log(result.di);
         console.log(result);
       }

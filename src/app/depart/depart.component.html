@@ -1,18 +1,16 @@
 <div>
   {{title}}
+</div>
 
-
-   <!--<div style="display:none">
-    dino : <input type="text" [(ngModel)]="di.dino"><br>
-    diname : <input type="text" [(ngModel)]="di.diname"><br>
-    didesc : <input type="text" [(ngModel)]="di.didesc"><br>
-    dicnt : <input type="text" [(ngModel)]="di.dicnt"><br>
+<!--    dino : <input type="text" [(ngModel)]="di.diNo"><br>
+    diname : <input type="text" [(ngModel)]="di.diName"><br>
+    didesc : <input type="text" [(ngModel)]="di.diDesc"><br>
+    dicnt : <input type="text" [(ngModel)]="di.diCnt"><br>-->
     결과 : 
-    부서번호 :{{di.dino}}<br> 
-    부서이름 :{{di.diname}}<br>
-    부서설명 :{{di.didesc}}<br>
-    부서인원 :{{di.dicnt}}<br>
-  </div>-->
+    부서번호 :{{di.diNo}}<br> 
+    부서이름 :{{di.diName}}<br>
+    부서설명 :{{di.diDesc}}<br>
+    부서인원 :{{di.diCnt}}<br>
 
 
   <app-depart-insert 
@@ -54,6 +52,5 @@
           
       </tr>
 </table>
-</div>
 
 <app-test *ngIf="isShow"></app-test>
