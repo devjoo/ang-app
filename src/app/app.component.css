@@ -1,4 +1,4 @@
-*{
+/**{
 	margin: 0px;
 	padding: 0px;
 	box-sizing:border-box;
@@ -8,5 +8,5 @@ html,body{margin:0;padding:0;height:100%}
 header{background:#000;overflow:hidden;display: flex}
 header nav li {float:left;padding:5px;list-style:none}
 header nav li a{color:#fff;}
-#container{}
+#container{}*/
 footer{background:#000}

@@ -9,16 +9,20 @@ import { DepartService } from './depart.service';
   providers:[DepartService] //얘를 사용하겠다고 providers로 지정해줘야한다 
 })
 export class DepartComponent implements OnInit {
-  di : Depart;
+  //di : Depart;
   title : string = "부서정보";
   button : string = "보기";
   btnStr : string = "보기"; // 쌤이 한거
   isShow : boolean = false;
   diList : Array<Depart> = []; // 디파트 정보가지고 있는 배열 리스트 만들기
   diService : DepartService;
+
+  parentVisible : boolean = false;
+  visible : boolean = false;
+  subTitle :string = this.title + "입력";
   
   constructor(private dis:DepartService) {
-    this.di = new Depart();  // 메모리에 생성해야 사용할수있다
+    //this.di = new Depart();  // 메모리에 생성해야 사용할수있다
     //dis.getDepartList();
     console.log("나도 누군가를 호출하겠지!!");
 
@@ -31,10 +35,19 @@ export class DepartComponent implements OnInit {
 
   ngOnInit() {
   }
-  addDepart():void{
-    this.dis.addDepart(this.di);
-    this.di = new Depart();
+  toggleDepartInsert(v:boolean){
+    this.visible = v;
   }
+  addDepart(di:Depart):void{
+    this.dis.addDepart(di).subscribe( //subscribe 요청하고 나서 풀어주는것
+      datas => {
+        let result = datas.json();
+        //console.log(result.di);
+        console.log(result);
+      }
+    );
+  }
+
   showDepartList():void{
     this.diList = this.dis.getDepartList();
   }
@@ -57,9 +70,9 @@ export class DepartComponent implements OnInit {
    alert(idx);
    this.diList.splice(idx, 1);
   }
-  printDepartInfo(){
+  /*printDepartInfo(){
     console.log(this.di);
-  }
+  }*/
   changeShow():void{
     //this.isShow = this.isShow ? false : true;
     /*if(this.isShow){

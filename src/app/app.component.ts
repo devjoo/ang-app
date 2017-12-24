@@ -11,8 +11,13 @@ export class AppComponent {
   userList : Array<User> = [];  // 데이터타입을 User로 강제한 배열을 만듬 (제너릭)
   userName:string = '';
   userAge:number = 0;
+  user : User;
 
   constructor(){
+    this.user = new User();
+    this.user.userId = "test";
+    this.user.userName = "테스트";
+    sessionStorage.setItem("user",JSON.stringify(this.user));
   }
 
   addUser() : void {

@@ -110,3 +110,43 @@ D:\ts2\works\ang>ng generate component User
 
   ### Depart 서비스 클래스 생성
   ng g service Depart
+
+  session storage 브라우저 메모리 올라감
+  input output 인젝터
+  @output : 여기서 생성한 값을 부모에게 전달하겠다.
+
+  #ng generate component Welcome
+  Welcome 컴포넌트 생성
+  (ng g c Welcome)
+
+  ##app.component.ts
+```
+  user : User;
+
+  constructor(){
+    this.user = new User();
+    this.user.userId = "test";
+    this.user.userName = "테스트";
+    sessionStorage.setItem("user",JSON.stringify(this.user));
+  }
+  ```
+
+  ##welcome/welcome.component.ts
+```
+import { User } from '../user/user';
+...
+export class WelcomeComponent implements OnInit {
+  user : User;
+  constructor() {
+    let userStr = sessionStorage.getItem("user");
+    alert(userStr);
+    this.user = JSON.parse(userStr);
+  }
+```
+
+#ng g c DepartInsert
+
+#ng g c FuncTest
+
+npm install bootstrap@3 jquery --save
+//해서 bootstrap, jqeury 관리자 권한으로설치
