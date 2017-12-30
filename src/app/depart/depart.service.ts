@@ -22,9 +22,20 @@ export class DepartService {
     this.di = new Depart(); // di 초기화 > 메모리 공유하지 않게
     console.log(this.diList);*/
   }
-  getDepartList():Array<Depart>{
-    return this.diList;
-    //console.log("어? 나 생성한적 없는디??");
 
+  addDepartPost(di:Depart):Observable<any>{
+    let url:string = "api/departs";
+    return this._http.post(this.url + url, di);
+  }
+
+  deleteDepartPost(di:Depart):Observable<any>{
+    let url:string = "api/departs/" + di.diNo;
+    return this._http.delete(this.url + url);
+  }
+
+  getDepartList(diNo:string):Observable<any>{
+    let url:string = "api/departs/" + diNo;
+    return this._http.get(this.url + url);
+    //console.log("어? 나 생성한적 없는디??");
   }
 }

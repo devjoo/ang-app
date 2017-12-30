@@ -150,3 +150,6 @@ export class WelcomeComponent implements OnInit {
 
 npm install bootstrap@3 jquery --save
 //해서 bootstrap, jqeury 관리자 권한으로설치
+
+bind/call 차이
+옵저버패턴 - 

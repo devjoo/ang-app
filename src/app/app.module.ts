@@ -11,6 +11,8 @@ import { DepartComponent } from './depart/depart.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DepartInsertComponent } from './depart-insert/depart-insert.component';
 import { FuncTestComponent } from './func-test/func-test.component';
+import { PromiseComponent } from './promise/promise.component';
+import { DepartUpdateComponent } from './depart-update/depart-update.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { FuncTestComponent } from './func-test/func-test.component';
     WelcomeComponent,
     UserComponent,
     DepartInsertComponent,
-    FuncTestComponent
+    FuncTestComponent,
+    PromiseComponent,
+    DepartUpdateComponent
   ],
    // 위 사용하게 될 컴포넌트 모두 등록 
    // 등록해두면 다시 선언할 필요없다
@@ -35,7 +39,8 @@ import { FuncTestComponent } from './func-test/func-test.component';
        { path: 'test', component: TestComponent },
        { path: 'depart', component: DepartComponent },
        { path: '', component: WelcomeComponent },
-       { path: 'functest', component: FuncTestComponent }
+       { path: 'functest', component: FuncTestComponent },
+       { path: 'promise', component: PromiseComponent }
      ])
   ],
   providers: [],
