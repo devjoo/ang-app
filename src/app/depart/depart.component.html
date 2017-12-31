@@ -8,10 +8,10 @@
     부서인원 :{{di.diCnt}}<br>
 
   <app-depart-update
-    *ngIf="visible2"
+    *ngIf="duVisible2"
     [title]="subTitle2"
     [duDiNo]="duDiNo"
-    (childVisible)="toggleDepartInsert($event)"
+    (duCase)="duCase($event)"
     (childDi)="updateDepart($event)"
   ></app-depart-update>
   

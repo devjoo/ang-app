@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+<div>
+  <table>
+    <tr>
+      <th>유저번호</th>
+      <th>유저이름</th>
+      <th>유저아이디</th>
+      <th>부서번호</th>
+      <th>부서명</th>
+      <th>수정</th>
+      <th>삭제</th>
+    </tr>
+    <tr *ngFor="let ud of udList">
+      <td>{{ud.userNo}}</td>
+      <td><input type="text" [(ngModel)]="ud.userName"></td>
+      <td><input type="text" [(ngModel)]="ud.userId"></td>
+      <td>{{ud.dino}}</td>
+      <td>
+        <select [(ngModel)]="ud.dino">
+          <option *ngFor="let di of diList" [value]="di.diNo">
+            {{di.diName}}
+          </option>
+        </select>
+      </td>
+      <td><button (click)="updateUser(ud)">수정</button></td>
+      <td><button (click)="deleteUser(ud)">삭제</button></td>
+    </tr>
+  </table>
+</div>

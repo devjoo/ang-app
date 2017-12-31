@@ -36,6 +36,5 @@ export class DepartService {
   getDepartList(diNo:string):Observable<any>{
     let url:string = "api/departs/" + diNo;
     return this._http.get(this.url + url);
-    //console.log("어? 나 생성한적 없는디??");
   }
 }

@@ -1,0 +1,4 @@
+<h1>{{title}}</h1>
+<button (click)="chVisible(true)">자식창 보기</button>
+<button (click)="chVisible(false)">자식창 숨기기</button>
+<app-lifecycle-test *ngIf="visible" [title]="subTitle" (childVisible)="chVisible($event)"></app-lifecycle-test>

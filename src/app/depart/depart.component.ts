@@ -20,6 +20,7 @@ export class DepartComponent implements OnInit {
   parentVisible : boolean = false;
   visible : boolean = false;
   visible2 : boolean = false;
+  duVisible2 : boolean = false;
   subTitle :string = this.title + "추가";
   subTitle2 :string = this.title + "추가";
   diNo : string = "";
@@ -52,6 +53,13 @@ export class DepartComponent implements OnInit {
     );
   }
 
+  duCase(duCase:string):void{
+    this.duVisible2 = false;
+    if(duCase=="reload"){
+      this.showDepartList();
+    }
+  }
+  
   updateDepart(di:Depart):void{
     this.dis.addDepartPost(di).subscribe( //subscribe 요청하고 나서 풀어주는것
       datas => {
@@ -126,7 +134,7 @@ export class DepartComponent implements OnInit {
   }
 
   duVisible(v:boolean):void{
-    this.visible2 = v;
+    this.duVisible2 = v;
   }
   openView(di:Depart):void{
     this.duDiNo = di.diNo;

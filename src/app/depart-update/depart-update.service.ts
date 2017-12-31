@@ -9,7 +9,7 @@ export class DepartUpdateService {
 
   constructor(protected _http:Http) { }
 
-  updateDepartPost(di:Depart):Observable<any>{
+  updateDepart(di:Depart):Observable<any>{
     let url:string = "api/departs/update";
     return this._http.post(this.url + url, di);
   }
