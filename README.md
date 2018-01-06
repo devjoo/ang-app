@@ -153,3 +153,54 @@ npm install bootstrap@3 jquery --save
 
 bind/call 차이
 옵저버패턴 - 
+
+
+# MENU 생성
+```
+drop table menu;
+create table menu(
+mNo int UNSIGNED AUTO_INCREMENT primary key,
+mUrl varchar(200) not null,
+mText varchar(200) not null,
+sort tinyint UNSIGNED not null)
+;
+
+insert into menu(mUrl, mText, sort)
+values('/','Home',1),user_info
+('/userdepart','UserList',2),
+('/depart','Depart',3),
+('/functest','Function Test',4),
+('/promise','Promise Test',5),
+('/parent','Compo Test',6);
+```
+
+
+
+# 왜쓴지 모르겠음
+192.168.101.231
+
+\\192.168.100.216
+
+mongod --dbpath C:\mongodb\db
+mongo
+
+종료
+use admin
+db.shutdownServer();
+quit();
+
+
+google
+AIzaSyD_b_nYN6T3YwmWWD6ry7eim3Y9Cf7AYSg
+
+parent 컴포넌트 패스 추가 
+ng g c LifecycleTest
+메뉴 추가 
+
+<button (click)="chVisible(true)">자식창 보기</button>
+<button (click)="chVisible(false)">자식창 보기</button>
+
+
+https://developers.sktelecom.com/
+
+---
