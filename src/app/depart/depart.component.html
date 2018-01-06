@@ -22,14 +22,13 @@
     (childDi)="addDepart($event)"
     >
   </app-depart-insert>
+
   <div>
-      <!--<button (click)="toggleDepartInsert()">부서추가(레이어)</button>-->
       <button (click)="toggleDepartInsert(true)">부서추가(레이어)</button>
       <input type="text" [(ngModel)]="diNo">
       <button (click)="showDepartList()">부서 리스트 검색</button>
   </div>
   <!--<div>
-    <button (click)="printDepartInfo()">변경</button>
     <button (click)="addDepart()">부서추가</button>
     <button (click)="showDepartList()">부서리스트보기</button>
     <button (click)="changeShow()">테스트 {{button}}</button>

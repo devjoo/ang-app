@@ -1,4 +1,5 @@
 export class UserDepart{
+    userno : number;
     dino : number;
     diName : string;
     diDesc : string;

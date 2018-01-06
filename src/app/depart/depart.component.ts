@@ -85,10 +85,11 @@ export class DepartComponent implements OnInit {
     );
     //this.diList = this.dis.getDepartList();
   }
-  deleteDepart(item):void{
+  
+  /*deleteDepart(item):void{
     var index = this.diList.indexOf(item);
     this.diList.splice(index, 1);
-  }
+  }*/
   getFine(diNo):number{
     let idx : number = -1;
     this.diList.forEach((di, index)=>{
@@ -113,19 +114,8 @@ export class DepartComponent implements OnInit {
   );
    //this.diList.splice(idx, 1);
   }
-  /*printDepartInfo(){
-    console.log(this.di);
-  }*/
+  
   changeShow():void{
-    //this.isShow = this.isShow ? false : true;
-    /*if(this.isShow){
-      this.isShow = false;
-      this.button = "보기";
-    }else{
-      this.isShow = true;
-      this.button = "안보기";
-    }*/
-
     this.isShow = !this.isShow;
     this.btnStr = "보기";
     if(this.isShow){

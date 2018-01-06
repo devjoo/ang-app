@@ -41,6 +41,10 @@ export class CommonServiceService {
     return paramStr.substr(0,paramStr.length-1);
   }
 
+  public getJSON(url:string):Observable<any>{
+    return this.getJson(url);
+  }
+
   protected getJson(url:string):Observable<any>{
     return this._http.get(url)
                     .map(this.extractJson)

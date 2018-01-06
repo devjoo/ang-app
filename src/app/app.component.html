@@ -5,13 +5,15 @@
         <div class="container-fluid'">
           <a href="/" class="navbar-brand">{{pageTitle}}</a>
           <ul class="nav navbar-nav">
-            <li><a [routerLink]="['/']">Home</a></li>
+            <li *ngFor="let list of rlList"><a [routerLink]="[list.mUrl]">{{list.mText}}</a></li>
+
+            <!--<li><a [routerLink]="['/']">Home</a></li>
             <li><a [routerLink]="['/userdepart']">User List</a></li>
             <li><a [routerLink]="['/test']">Test Component</a></li>
             <li><a [routerLink]="['/depart']">Depart Component</a></li>
             <li><a [routerLink]="['/functest']">Func Component</a></li>
             <li><a [routerLink]="['/promise']">Promise Component</a></li>
-            <li><a [routerLink]="['/parent']">parent Component</a></li>
+            <li><a [routerLink]="['/parent']">parent Component</a></li>-->
           </ul>
         </div>
       </nav>

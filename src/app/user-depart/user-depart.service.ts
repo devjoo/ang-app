@@ -24,7 +24,7 @@ export class UserDepartService {
   }
 
   deleteDepartPost(ud:UserDepart):Observable<any>{
-    let url:string = "api/userdeparts/" + ud.dino;
+    let url:string = "api/userdeparts/" + ud;
     return this._http.delete(this.url + url);
   }
 

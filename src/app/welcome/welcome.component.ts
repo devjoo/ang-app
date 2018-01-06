@@ -10,7 +10,6 @@ export class WelcomeComponent implements OnInit {
   user : User;
   constructor() {
     let userStr = sessionStorage.getItem("user");
-    alert(userStr);
     this.user = JSON.parse(userStr);
   }
 
